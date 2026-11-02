@@ -81,13 +81,27 @@
           <p class="section-intro">A selection of exploratory research tools, interactive visualizations, and software projects. Built in different contexts, with different levels of maturity.</p>
         </div>
         <div class="filter-row" role="group" aria-label="Filter projects">
-          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All projects <span>04</span></button>
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All projects <span>07</span></button>
           <button class="filter" type="button" data-filter="data" aria-pressed="false">Data & visualization</button>
-          <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI & research</button>
+          <button class="filter" type="button" data-filter="ml" aria-pressed="false">Machine learning</button>
+          <button class="filter" type="button" data-filter="research" aria-pressed="false">AI & research</button>
           <button class="filter" type="button" data-filter="engineering" aria-pressed="false">Engineering</button>
         </div>
         <div class="projects-grid">
-          <article class="project-card project-card-large reveal" data-category="data">
+          <article class="project-card project-card-large reveal" data-category="ml" data-project="adhd">
+            <div class="project-visual visual-health" aria-hidden="true">
+              <div class="report-window"><div class="report-header"><span>WiDS / 2025</span><span>EDA EXPLORER</span></div><div class="report-graph"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="report-tabs"><span>DEMOGRAPHICS</span><span>QUESTIONNAIRES</span><span>CONNECTOME</span></div></div>
+              <div class="visual-corner-label">ML / 001</div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-index">01</span><span class="project-category">MACHINE LEARNING · WiDS DATATHON 2025</span></div>
+              <h3>ADHD &amp; Sex Prediction <span>↗</span></h3>
+              <p>Explore demographics, questionnaire features and functional brain connectivity in the WiDS 2025 dataset. Includes a browser-based EDA presentation and reproducible classical ML / GNN workflows. A competition project, not a clinical diagnostic tool.</p>
+              <div class="tags"><span>Python</span><span>EDA</span><span>Graph learning</span><span>Plotly</span></div>
+              <div class="project-links"><a href="./adhd-eda/" target="_blank" rel="noopener noreferrer">Explore HTML reports ↗</a><a href="https://github.com/WuqianMa/ADHD_Gender_classification" target="_blank" rel="noopener noreferrer">Code &amp; methods ↗</a></div>
+            </div>
+          </article>
+          <article class="project-card reveal" data-category="data" data-project="airbnb">
             <div class="project-visual visual-data" aria-hidden="true">
               <div class="viz-window">
                 <div class="viz-window-header"><span>GEOGRAPHY OF PREFERENCE</span><span class="viz-window-dots"><i></i><i></i><i></i></span></div>
@@ -97,46 +111,72 @@
               <div class="visual-corner-label">DATA / 001</div>
             </div>
             <div class="project-content">
-              <div class="project-meta"><span class="project-index">01</span><span class="project-category">DATA VISUALIZATION · GROUP PROJECT</span></div>
+              <div class="project-meta"><span class="project-index">02</span><span class="project-category">DATA VISUALIZATION · GROUP PROJECT</span></div>
               <h3>Hong Kong Airbnb <span>↗</span></h3>
               <p>Explore geographic patterns in Airbnb listings and reviews through an interactive dashboard with maps, district comparisons, and text visualizations.</p>
               <div class="tags"><span>JavaScript</span><span>Leaflet</span><span>ECharts</span><span>GeoJSON</span></div>
               <div class="project-links"><a href="https://0-sigma-puce.vercel.app" target="_blank" rel="noopener noreferrer">Live dashboard ↗</a><a href="https://github.com/WuqianMa/Group-Projects-AI-and-Society" target="_blank" rel="noopener noreferrer">Source code ↗</a></div>
             </div>
           </article>
-          <article class="project-card reveal" data-category="ai">
+          <article class="project-card reveal" data-category="ml" data-project="dog">
+            <div class="project-visual visual-dogs" aria-hidden="true">
+              <div class="model-compare"><div class="compare-label">FULL IMAGE</div><div class="compare-bar"><i style="width:91.88%"></i></div><b>91.88%</b><div class="compare-label">CROPPED IMAGE</div><div class="compare-bar"><i style="width:88.70%"></i></div><b>88.70%</b><small>TOP-1 ACCURACY / TEST</small></div>
+              <div class="visual-corner-label">VISION / 003</div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-index">03</span><span class="project-category">COMPUTER VISION · COURSE RESEARCH</span></div>
+              <h3>Does Cropping the Dog Help? <span>↗</span></h3>
+              <p>A controlled comparison of full-image versus object-cropped inputs for 120-breed classification. Fine-tuned ConvNeXt showed lower top-1 accuracy with cropping (88.70% versus 91.88%), highlighting the value of image context.</p>
+              <div class="tags"><span>PyTorch</span><span>ConvNeXt</span><span>Grounding DINO</span><span>Model evaluation</span></div>
+              <div class="project-links"><a href="https://github.com/WuqianMa/Course_Project_Dog_Breed_classification/blob/main/report.pdf" target="_blank" rel="noopener noreferrer">Study report ↗</a><a href="https://github.com/WuqianMa/Course_Project_Dog_Breed_classification" target="_blank" rel="noopener noreferrer">Repository ↗</a></div>
+            </div>
+          </article>
+          <article class="project-card reveal" data-category="research" data-project="newslab">
             <div class="project-visual visual-news" aria-hidden="true">
               <div class="news-window"><div class="news-toolbar"><span class="tiny-logo"></span><span>NEWSLAB / STUDY</span><span>•••</span></div><div class="news-layout"><div class="news-main"><div class="news-image"></div><span class="news-line"></span><span class="news-line short"></span><div class="news-pills"><i></i><i></i><i></i></div></div><div class="news-sidebar"><span></span><span></span><span></span><span></span></div></div></div>
               <div class="visual-corner-label">RESEARCH / 002</div>
             </div>
             <div class="project-content">
-              <div class="project-meta"><span class="project-index">02</span><span class="project-category">RESEARCH SOFTWARE · HACKATHON</span></div>
+              <div class="project-meta"><span class="project-index">04</span><span class="project-category">RESEARCH SOFTWARE · HACKATHON</span></div>
               <h3>NewsLab <span>↗</span></h3>
               <p>A configurable prototype for browser-based news-feed experiments, participant interaction tracking, and structured data exports. Created with an AI-agent development workflow.</p>
               <div class="tags"><span>Experiment design</span><span>Event tracking</span><span>AI agents</span></div>
               <div class="project-links"><a href="https://my-repo-peach-five.vercel.app/" target="_blank" rel="noopener noreferrer">Live interactive demo ↗</a><a href="https://github.com/WuqianMa/NewsLab-Controlled-News-Feed-Experiments-in-the-Browser" target="_blank" rel="noopener noreferrer">Source code &amp; demos ↗</a></div>
             </div>
           </article>
-          <article class="project-card reveal" data-category="ai">
+          <article class="project-card reveal" data-category="research" data-project="eucourt">
             <div class="project-visual visual-eval" aria-hidden="true">
               <div class="eval-document"><div class="eval-doc-title"><span>REFERENCE CHECK</span><span>✳</span></div><div class="eval-lines"><span></span><span></span><span></span><span></span><span></span></div><div class="eval-stamps"><b>✓ VERIFIED</b><b>! REVIEW</b></div></div>
               <div class="visual-corner-label">EVALUATION / 003</div>
             </div>
             <div class="project-content">
-              <div class="project-meta"><span class="project-index">03</span><span class="project-category">LLM EVALUATION · EXPLORATORY</span></div>
+              <div class="project-meta"><span class="project-index">05</span><span class="project-category">LLM EVALUATION · EXPLORATORY</span></div>
               <h3>LLM Citation Evaluation <span>↗</span></h3>
               <p>A preliminary framework for checking legal citations produced by simulated AI agents against a local EU-law corpus. Initial example runs are not statistically conclusive.</p>
               <div class="tags"><span>Python</span><span>AI evaluation</span><span>EU regulation</span></div>
               <div class="project-links"><a href="https://github.com/WuqianMa/Course_Project_LLM-agent-EUcourt" target="_blank" rel="noopener noreferrer">Explore project ↗</a></div>
             </div>
           </article>
-          <article class="project-card reveal" data-category="engineering">
+          <article class="project-card reveal" data-category="engineering" data-project="spark">
+            <div class="project-visual visual-spark" aria-hidden="true">
+              <div class="spark-diagram"><div><span>PYSPARK</span><b>RDD</b></div><span class="spark-arrow">↔</span><div><span>SCALA</span><b>RDD</b></div><small>CONNECTED COMPONENT FINDER</small></div>
+              <div class="visual-corner-label">BIG DATA / 006</div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-index">06</span><span class="project-category">DISTRIBUTED SYSTEMS · GROUP PROJECT</span></div>
+              <h3>Connected Components with Spark <span>↗</span></h3>
+              <p>A group course project comparing iterative connected-component discovery in PySpark and Scala/Spark. Includes synthetic graph generation and 40 saved experiment logs across 20 graph datasets.</p>
+              <div class="tags"><span>Apache Spark</span><span>Scala</span><span>PySpark</span><span>Graphs</span></div>
+              <div class="project-links"><a href="https://github.com/WuqianMa/Course_Project_Big_Data_Paradigm" target="_blank" rel="noopener noreferrer">Implementation &amp; results ↗</a></div>
+            </div>
+          </article>
+          <article class="project-card reveal" data-category="engineering" data-project="ecommerce">
             <div class="project-visual visual-engineering" aria-hidden="true">
               <div class="terminal"><div class="terminal-heading"><span>PIPELINE / BUILD</span><span>● ● ●</span></div><div class="terminal-steps"><div><b>01</b><span>Build</span><i>✓</i></div><div><b>02</b><span>Test</span><i>✓</i></div><div><b>03</b><span>Package</span><i>✓</i></div></div></div>
               <div class="visual-corner-label">ENGINEERING / 004</div>
             </div>
             <div class="project-content">
-              <div class="project-meta"><span class="project-index">04</span><span class="project-category">SOFTWARE ENGINEERING · COURSEWORK</span></div>
+              <div class="project-meta"><span class="project-index">07</span><span class="project-category">SOFTWARE ENGINEERING · COURSEWORK</span></div>
               <h3>E-commerce CI/CD <span>↗</span></h3>
               <p>A coursework web application exploring backend development, containers, automated testing, and continuous integration workflows.</p>
               <div class="tags"><span>Django</span><span>Docker</span><span>GitHub Actions</span></div>
@@ -148,7 +188,7 @@
       </div>
     </section>
 
-    <section class="section about-section" id="about" aria-labelledby="about-title">
+        <section class="section about-section" id="about" aria-labelledby="about-title">
       <div class="shell about-grid">
         <div class="about-left reveal"><p class="section-kicker">02 / HOW I THINK</p><h2 id="about-title">Between research<br>and <em>building.</em></h2></div>
         <div class="about-right reveal"><p class="about-lead">I am drawn to questions that need both analytical thinking and practical tools.</p><p>My interests include information retrieval, document AI, LLM evaluation, and data visualization. I enjoy connecting research methods with interfaces that help people inspect, compare, and reason about information.</p><p>My projects span academic coursework, exploratory prototypes, and research assistance. I value transparent documentation of methods, limitations, and the use of AI development tools.</p><div class="interest-list"><span>Information retrieval</span><span>Document AI</span><span>Data visualization</span><span>LLM evaluation</span><span>Research software</span></div></div>

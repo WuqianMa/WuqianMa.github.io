@@ -14,7 +14,7 @@ The same **experience** (Dauphine–PSL, Outlier, State Key Laboratory) and **ed
 
 ## Features
 
-Responsive portfolio, project filtering, dark/light theme, accessible language links, reduced-motion support, and contact information. The site is static HTML, CSS and JavaScript with no build process.
+Responsive portfolio with seven verified public projects grouped into Data & Visualization, Machine Learning, AI & Research and Engineering; project filtering, dark/light theme, accessible language links, reduced-motion support, and contact information. The site is static HTML, CSS and JavaScript with no build process.
 
 ## Local development
 
@@ -29,3 +29,12 @@ Open http://localhost:8000/ and try all three languages, filters and themes. Eng
 GitHub repository **Settings → Pages → Deploy from a branch → main → /(root)**. See the deployed site at https://wuqianma.github.io/.
 
 Visual graphics are illustrative rather than screenshots or measured findings. Research materials that are not public remain unpublished.
+
+## Recently refreshed work (November 2026)
+
+- **[ADHD & Sex Prediction / WiDS 2025](https://github.com/WuqianMa/ADHD_Gender_classification)** — [live HTML EDA reports](https://wuqianma.github.io/adhd-eda/) (demographic, questionnaire and connectome reports); an academic competition project, not a diagnostic tool.
+- **[Dog Breed Classification](https://github.com/WuqianMa/Course_Project_Dog_Breed_classification)** — controlled image cropping / computer vision study and report.
+- **[Connected Components with Spark](https://github.com/WuqianMa/Course_Project_Big_Data_Paradigm)** — PySpark versus Scala iterative connected-components, 20 graphs / 40 experiment logs (group project).
+- **[NewsLab](https://github.com/WuqianMa/NewsLab-Controlled-News-Feed-Experiments-in-the-Browser)**, **[Hong Kong Airbnb](https://github.com/WuqianMa/Group-Projects-AI-and-Society)** and **[EU Court LLM agents](https://github.com/WuqianMa/Course_Project_LLM-agent-EUcourt)** are retained and categorized.
+
+Online ADHD reports are copied to `adhd-eda/` for GitHub Pages hosting, with image assets loaded from the originating public repository and its Plotly bundle through the jsDelivr GitHub mirror. Offline self-contained reports remain in the ADHD repository.
