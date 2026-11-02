@@ -14,7 +14,7 @@ The same **experience** (Dauphine–PSL, Outlier, State Key Laboratory) and **ed
 
 ## Features
 
-Responsive portfolio with seven verified public projects grouped into Data & Visualization, Machine Learning, AI & Research and Engineering; project filtering, dark/light theme, accessible language links, reduced-motion support, and contact information. The site is static HTML, CSS and JavaScript with no build process.
+Responsive portfolio with eight verified public projects grouped into Data & Visualization, Machine Learning, AI & Research and Engineering; project filtering, dark/light theme, accessible language links, reduced-motion support, and contact information. The site is static HTML, CSS and JavaScript with no build process.
 
 ## Local development
 
@@ -33,6 +33,7 @@ Visual graphics are illustrative rather than screenshots or measured findings. R
 ## Recently refreshed work (November 2026)
 
 - **[ADHD & Sex Prediction / WiDS 2025](https://github.com/WuqianMa/ADHD_Gender_classification)** — [live HTML EDA reports](https://wuqianma.github.io/adhd-eda/) (demographic, questionnaire and connectome reports); an academic competition project, not a diagnostic tool.
+- **[Facial Keypoint Detection](https://github.com/WuqianMa/Course_Project_Face_Keypoint)** — group deep learning course project on landmark regression, three architectures, deduplication and augmentation ablations; [report](https://github.com/WuqianMa/Course_Project_Face_Keypoint/blob/main/report.pdf). Original training data and checkpoints not included.
 - **[Dog Breed Classification](https://github.com/WuqianMa/Course_Project_Dog_Breed_classification)** — controlled image cropping / computer vision study and report.
 - **[Connected Components with Spark](https://github.com/WuqianMa/Course_Project_Big_Data_Paradigm)** — PySpark versus Scala iterative connected-components, 20 graphs / 40 experiment logs (group project).
 - **[NewsLab](https://github.com/WuqianMa/NewsLab-Controlled-News-Feed-Experiments-in-the-Browser)**, **[Hong Kong Airbnb](https://github.com/WuqianMa/Group-Projects-AI-and-Society)** and **[EU Court LLM agents](https://github.com/WuqianMa/Course_Project_LLM-agent-EUcourt)** are retained and categorized.

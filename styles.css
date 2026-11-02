@@ -272,3 +272,12 @@ h1 em, h2 em { font: italic 1.12em var(--serif); letter-spacing: -.045em; color:
 .spark-diagram div{display:grid;gap:8px;place-items:center;border:1px solid #588b97;padding:18px;border-radius:9px}
 .spark-diagram div span{font-size:10px;letter-spacing:.14em}.spark-diagram div b{font-size:24px;font-weight:600}.spark-arrow{font-size:28px;color:#dbf5e6}.spark-diagram small{display:block;width:100%;text-align:center;font-size:9px;letter-spacing:.15em;color:#95c9ce;}
 @media(max-width:520px){.report-window{padding:15px;min-height:185px}.report-tabs span{font-size:7px}.spark-diagram div{padding:12px}.model-compare{padding:15px}}
+
+/* Schematic face landmarks for the course-project card. Not a model prediction. */
+.visual-face { background: linear-gradient(140deg,#c8d9df,#a7c0ce); }
+.landmark-panel { width:76%;max-width:300px;border:1px solid #dce8eb;border-radius:14px;background:#f5fafb;padding:15px 19px 13px;box-shadow:0 22px 38px #29465730;transform:rotate(-3deg);color:#314f60; }
+.landmark-header {display:flex;justify-content:space-between;gap:8px;font-size:9px;font-weight:700;letter-spacing:.09em;}
+.face-outline {height:146px;width:114px;border:2px solid #7a9bac;border-radius:48% 48% 43% 43%;margin:10px auto 6px;position:relative;background:linear-gradient(180deg,#e0ecef,#d1e2e9);}
+.landmark-dot {position:absolute;width:10px;height:10px;border-radius:50%;background:#c55d56;border:2px solid white;box-shadow:0 0 0 1px #c55d56;transform:translate(-50%,-50%);}
+.eye-left {left:30%;top:38%}.eye-right {left:70%;top:38%}.nose {left:50%;top:60%}.mouth-left {left:38%;top:80%}.mouth-right {left:62%;top:80%}
+.landmark-models {display:flex;justify-content:space-around;gap:6px;font-size:9px;font-weight:700;letter-spacing:.05em;border-top:1px solid #d5e3e7;padding-top:10px;}
