@@ -1,39 +1,31 @@
-# Wuqian Ma — Portfolio Website
+# Wuqian Ma — Trilingual Portfolio
 
-Source for [wuqianma.github.io](https://wuqianma.github.io/), a static portfolio highlighting applied AI, data analytics, and research-oriented software.
+Source for [wuqianma.github.io](https://wuqianma.github.io/), a lightweight portfolio for applied AI, data analytics and research software.
 
-## Pages and features
+## Languages
 
-- Responsive landing page and curated project cards
-- Project filters for **Data & visualization**, **AI & research**, and **Engineering**
-- Dark/light theme switcher (saved locally in the browser)
-- Background, education, research experience, and contact sections
-- Accessible navigation, visible focus states, and reduced-motion support
+Choose **English, Français, or 中文** from the header. Content is translated in place, with a shareable `?lang=fr` or `?lang=zh` URL; English is the default. The selected language is saved locally. The original English page remains visible without JavaScript.
 
-## Technologies
+- [English](https://wuqianma.github.io/)
+- [Français](https://wuqianma.github.io/?lang=fr)
+- [中文](https://wuqianma.github.io/?lang=zh)
 
-Plain HTML, CSS, and JavaScript. No build step or framework is required. Google Fonts are optional and have system fallbacks.
+The same **experience** (Dauphine–PSL, Outlier, State Key Laboratory) and **education** (PSL, Efrei, Hainan University) appear in all three languages, based on the owner's LinkedIn export. The Efrei coursework is complete but the final internship required to graduate remains outstanding.
 
-## Preview locally
+## Features
 
-From the repository root:
+Responsive portfolio, project filtering, dark/light theme, accessible language links, reduced-motion support, and contact information. The site is static HTML, CSS and JavaScript with no build process.
+
+## Local development
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then visit http://localhost:8000/.
+Open http://localhost:8000/ and try all three languages, filters and themes. English content is maintained in `index.html`; translated text is kept in `script.js` in the `messages` list. Styling is in `styles.css`.
 
-## Publish with GitHub Pages
+## Publishing
 
-In the repository, open **Settings → Pages**, choose **Deploy from a branch**, select **main** and **/(root)**, then **Save**. The website should be hosted at https://wuqianma.github.io/ once deployment succeeds. Publishing is controlled by repository settings, not this README.
+GitHub repository **Settings → Pages → Deploy from a branch → main → /(root)**. See the deployed site at https://wuqianma.github.io/.
 
-## Updating the portfolio
-
-- Update page content and external links in `index.html`.
-- Update layout, colors, and decorative illustrations in `styles.css`.
-- Update project category filters and the theme switcher in `script.js`.
-
-Project-card graphics are decorative illustrations, **not screenshots or measured research results**. For real interfaces and project details, follow each project’s own repository or demo link.
-
-This public website does not publish private research repositories or a downloadable copy of the applicant's CV.
+Visual graphics are illustrative rather than screenshots or measured findings. Research materials that are not public remain unpublished.
