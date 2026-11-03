@@ -145,3 +145,171 @@ html[data-theme="dark"] .hero .hero-lede {color:#453629}
   .project-content {padding:24px 20px}
   .project-content h3 {font-size:23px}
 }
+
+/* Full-bleed, straight project covers.
+   The first child is the artwork itself (not a floating screenshot);
+   the compact label lives in its own strip beneath that artwork. */
+.projects-grid .project-card .project-visual,
+.projects-grid .project-card:nth-child(even) .project-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) 29px;
+  place-items: stretch;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+}
+.projects-grid .project-card .project-visual::before {
+  display: none;
+  content: none;
+}
+.projects-grid .project-card .project-visual > :first-child:not(.visual-corner-label) {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: stretch;
+  align-self: stretch;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 15px 22px;
+  transform: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+}
+.projects-grid .project-card .visual-corner-label {
+  grid-column: 1;
+  grid-row: 2;
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  min-width: 0;
+  height: 29px;
+  margin: 0;
+  padding: 3px 15px;
+  background: var(--surface);
+  color: var(--text);
+  border: 0;
+  border-top: 2px solid var(--cut-ink);
+  font: 700 10px/1.1 var(--sans);
+  letter-spacing: .12em;
+  text-align: right;
+}
+
+/* Internal graphics stay upright and use all the allotted cover area. */
+.projects-grid .project-card .report-window {
+  display: flex !important;
+  flex-direction: column;
+}
+.projects-grid .project-card .report-graph {
+  flex: 1 1 auto;
+  min-height: 58px;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+.projects-grid .project-card .report-tabs {
+  margin-top: auto;
+  gap: 5px;
+  padding-top: 8px;
+}
+.projects-grid .project-card .report-tabs span {
+  font-size: 8px;
+  padding: 3px 6px;
+}
+.projects-grid .project-card .viz-window {
+  display: flex !important;
+  flex-direction: column;
+  padding: 15px 22px;
+}
+.projects-grid .project-card .viz-top-row {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: auto;
+}
+.projects-grid .project-card .viz-bottom {
+  flex: 0 0 11%;
+  height: auto;
+}
+.projects-grid .project-card .model-compare {
+  display: grid !important;
+  align-content: center;
+  gap: 4px;
+  padding: 12px 28px;
+}
+.projects-grid .project-card .model-compare .compare-bar { height: 11px; }
+.projects-grid .project-card .model-compare b { font-size: 16px; line-height: 1; }
+.projects-grid .project-card .landmark-panel {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 11px 22px;
+}
+.projects-grid .project-card .face-outline {
+  flex: 0 1 112px;
+  width: 92px;
+  height: 112px;
+  min-height: 80px;
+  margin: 5px auto;
+}
+.projects-grid .project-card .news-window {
+  display: flex !important;
+  flex-direction: column;
+}
+.projects-grid .project-card .news-layout {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.projects-grid .project-card .news-main { min-height: 0; }
+.projects-grid .project-card .news-image { flex: 1; min-height: 40px; }
+.projects-grid .project-card .news-sidebar { min-height: 0; }
+.projects-grid .project-card .news-sidebar span { flex: 1; height: auto; }
+.projects-grid .project-card .eval-document {
+  display: flex !important;
+  flex-direction: column;
+  padding: 12px 24px;
+}
+.projects-grid .project-card .eval-lines {
+  flex: 1 1 auto;
+  margin-top: 12px;
+  gap: 7px;
+}
+.projects-grid .project-card .eval-stamps { margin-top: 9px; }
+.projects-grid .project-card .spark-diagram {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: center;
+  justify-items: center;
+  gap: 9px;
+}
+.projects-grid .project-card .spark-diagram > div { padding: 12px 15px; }
+.projects-grid .project-card .spark-diagram small { grid-column: 1 / -1; }
+.projects-grid .project-card .terminal {
+  display: flex !important;
+  flex-direction: column;
+}
+.projects-grid .project-card .terminal-steps {
+  flex: 1 1 auto;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+@media (max-width: 520px) {
+  .projects-grid .project-card .project-visual > :first-child:not(.visual-corner-label) {
+    padding: 12px 14px;
+  }
+  .projects-grid .project-card .report-tabs span { font-size: 7px; }
+  .projects-grid .project-card .model-compare { padding: 9px 16px; }
+  .projects-grid .project-card .spark-diagram > div { padding: 9px; }
+}
