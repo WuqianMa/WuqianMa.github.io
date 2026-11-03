@@ -10,6 +10,7 @@
   --cut-ink:#282018; --paper:#FAF2E6; --yellow:#FFCC66;
   /* One consistent cut-line weight/style for cards, controls and section seams. */
   --cut-dash:3px dashed var(--cut-ink);
+  --control-border:3px solid var(--cut-ink);
 }
 body { background:var(--bg); background-image:radial-gradient(rgba(40,32,24,.045) .45px,transparent .45px); background-size:7px 7px; }
 .grain { opacity:.04; }
@@ -23,8 +24,8 @@ a:focus-visible,button:focus-visible {outline:3px dashed var(--cut-ink);outline-
 .mouse-mark {display:block;width:62px;height:42px;color:#282018;stroke:currentColor;overflow:visible}
 .brand-label {letter-spacing:.13em}
 .nav-links a:hover,.footer a:hover {color:var(--text);text-decoration:underline;text-decoration-style:solid;text-underline-offset:6px}
-.theme-toggle,.header-github {border:var(--cut-dash);border-radius:0;box-shadow:3px 3px 0 var(--cut-ink)}
-.language-switch {border:var(--cut-dash);border-radius:0;padding:2px}
+.theme-toggle,.header-github {border:var(--control-border);border-radius:0;box-shadow:3px 3px 0 var(--cut-ink)}
+.language-switch {border:var(--control-border);border-radius:0;padding:2px}
 .language-switch a,.language-switch a[aria-current="page"] {border-radius:0}
 .language-switch a[aria-current="page"] {background:#FFCC66;color:#282018}
 
@@ -40,7 +41,7 @@ h1 em,h2 em {color:inherit;font-weight:400;text-decoration:underline;text-decora
 .hero h1 em {text-decoration-color:#FAF2E6}
 .hero-lede {font-size:16px}
 .status-dot {background:#282018;box-shadow:0 0 0 4px rgba(40,32,24,.1)}
-.button {border:var(--cut-dash);border-radius:0;box-shadow:4px 4px 0 var(--cut-ink);transition:transform .18s,box-shadow .18s}
+.button {border:var(--control-border);border-radius:0;box-shadow:4px 4px 0 var(--cut-ink);transition:transform .18s,box-shadow .18s}
 .button:hover {transform:translate(2px,2px);box-shadow:2px 2px 0 var(--cut-ink)}
 .button-primary {background:#FFCC66;border-color:var(--cut-ink);color:#282018}
 .hero .button-primary {background:#FAF2E6;border-color:#282018}
@@ -67,7 +68,7 @@ h1 em,h2 em {color:inherit;font-weight:400;text-decoration:underline;text-decora
 .section-heading h2,.about-section h2 {font-size:clamp(42px,4.8vw,69px)}
 .section-intro,.about-right p,.timeline-item p,.contact-inner>p:not(.section-kicker) {color:var(--muted)}
 .filter-row {border-bottom:var(--cut-dash);gap:9px}
-.filter {background:transparent;color:var(--text);border:var(--cut-dash);border-radius:0;font-size:11px}
+.filter {background:transparent;color:var(--text);border:var(--control-border);border-radius:0;font-size:11px}
 .filter.is-active {background:#FFCC66;color:#282018;border-color:var(--cut-ink);box-shadow:3px 3px 0 var(--cut-ink)}
 .filter:hover {background:#FFCC66;color:#282018;border-color:var(--cut-ink)}
 .filter span {opacity:1}
@@ -95,7 +96,7 @@ h1 em,h2 em {color:inherit;font-weight:400;text-decoration:underline;text-decora
 .all-work-link {margin-top:44px}
 
 /* About, background and contact use the same paper stock. */
-.about-section {border-bottom:var(--cut-dash)}
+.about-section {border-bottom:0}
 .about-right .about-lead {color:var(--text)}
 .interest-list span {border-bottom:2px solid var(--cut-ink)}
 .background-column h3 {border-bottom:var(--cut-dash)}
