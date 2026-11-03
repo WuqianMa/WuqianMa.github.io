@@ -6,7 +6,7 @@
   --surface-raised:#FFCC66; --line:#282018; --text:#282018;
   --muted:#51473d; --soft:#645445; --accent:#FFCC66;
   --accent-ink:#282018; --secondary-accent:#FFCC66;
-  --shadow:rgba(40,32,24,.18); --radius:0px;
+  --shadow:rgba(40,32,24,.18); --selected-shadow:#ACA8A3; --radius:0px;
   --cut-ink:#282018; --paper:#FAF2E6; --yellow:#FFCC66;
   /* One consistent cut-line weight/style for cards, controls and section seams. */
   --cut-dash:3px dashed var(--cut-ink);
@@ -69,19 +69,19 @@ h1 em,h2 em {color:inherit;font-weight:400;text-decoration:underline;text-decora
 .section-intro,.about-right p,.timeline-item p,.contact-inner>p:not(.section-kicker) {color:var(--muted)}
 .filter-row {border-bottom:var(--cut-dash);gap:9px}
 .filter {background:transparent;color:var(--text);border:var(--control-border);border-radius:0;font-size:11px}
-.filter.is-active {background:#FFCC66;color:#282018;border-color:var(--cut-ink);box-shadow:3px 3px 0 var(--cut-ink)}
+.filter.is-active {background:#FFCC66;color:#282018;border-color:var(--cut-ink);box-shadow:3px 3px 0 var(--selected-shadow)}
 .filter:hover {background:#FFCC66;color:#282018;border-color:var(--cut-ink)}
 .filter span {opacity:1}
 
 /* Every project occupies exactly one cell of an equal-row, two-column grid. */
 .projects-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;gap:40px;padding:13px 15px 20px;align-items:stretch}
 .project-card,.project-card-large,.project-card-large+.project-card {grid-column:auto;min-width:0;height:100%;position:relative;display:flex;flex-direction:column;background:var(--surface);border:var(--cut-dash);border-radius:0;box-shadow:6px 6px 0 var(--shadow);overflow:hidden;transition:transform .2s,box-shadow .2s}
-.project-card:hover {transform:translate(-3px,-3px);border-color:var(--cut-ink);box-shadow:10px 10px 0 var(--cut-ink)}
+.project-card:hover {transform:translate(-3px,-3px);border-color:var(--cut-ink);box-shadow:10px 10px 0 var(--selected-shadow)}
 .project-visual,.project-card-large .project-visual {position:relative;flex:0 0 232px;height:232px;background:#FFCC66;border-bottom:3px solid #282018;overflow:hidden}
 .project-card:nth-child(even) .project-visual {background:#FAF2E6}
 .visual-corner-label {color:#282018;background:#FAF2E6;border:1px solid #282018;padding:3px 6px;bottom:13px;right:14px;font-weight:700}
 .report-window,.viz-window,.model-compare,.landmark-panel,.news-window,.eval-document,.terminal,.spark-diagram {border:2px solid #282018;border-radius:2px;box-shadow:6px 6px 0 rgba(40,32,24,.22)}
-.project-content {display:flex;flex:1;flex-direction:column;padding:28px 29px 26px;min-height:0}
+.project-content {display:flex;flex:1;flex-direction:column;padding:28px 29px 26px;min-height:0;background:#FFCC66}
 .project-meta {margin-bottom:14px;align-items:start}
 .project-index {color:var(--text);font:700 32px/.9 var(--serif)}
 .project-category {color:var(--soft);font-size:10px;letter-spacing:.11em;line-height:1.4}
@@ -118,9 +118,13 @@ html[data-theme="dark"] {
   --bg:#241d17;--bg-alt:#241d17;--surface:#30261d;--surface-raised:#4b3723;
   --line:#FFCC66;--text:#FAF2E6;--muted:#e0d1bd;--soft:#d5bc91;
   --accent:#FFCC66;--accent-ink:#241d17;--secondary-accent:#FFCC66;
-  --shadow:rgba(255,204,102,.16);--cut-ink:#FFCC66;
+  --shadow:rgba(255,204,102,.16);--selected-shadow:#8B8985;--cut-ink:#FFCC66;
 }
 html[data-theme="dark"] .project-visual {border-bottom-color:#FFCC66}
+html[data-theme="dark"] .project-content {
+  --text:#282018;--muted:#51473d;--soft:#645445;--cut-ink:#282018;
+  color:#282018;
+}
 html[data-theme="dark"] .hero .hero-lede {color:#453629}
 @media(max-width:1040px) {
   .hero {padding-top:75px}
@@ -153,9 +157,29 @@ html[data-theme="dark"] .hero .hero-lede {color:#453629}
   position: relative;
   display: block;
   padding: 0;
-  background: #FFCC66;
+  background: transparent;
   overflow: hidden;
 }
+
+/* Use each project's original cover artwork palette, not a yellow cover tint.
+   The full-bleed artwork itself keeps its native colors. */
+.projects-grid .project-card .project-visual.visual-health {
+  background: linear-gradient(145deg,#d7e9e2,#9ac3b2);
+}
+.projects-grid .project-card .project-visual.visual-data { background:#c5d8c5; }
+.projects-grid .project-card .project-visual.visual-dogs {
+  background: linear-gradient(135deg,#b5a4a1,#dbc9b4);
+}
+.projects-grid .project-card .project-visual.visual-face {
+  background: linear-gradient(140deg,#c8d9df,#a7c0ce);
+}
+.projects-grid .project-card .project-visual.visual-news { background:#7ba2a1; }
+.projects-grid .project-card .project-visual.visual-eval { background:#b4a5b7; }
+.projects-grid .project-card .project-visual.visual-spark {
+  background: linear-gradient(125deg,#2f5b6b,#658b8e);
+}
+.projects-grid .project-card .project-visual.visual-engineering { background:#7e92a5; }
+
 .projects-grid .project-card .project-visual::before {
   display: none;
   content: none;
@@ -174,7 +198,6 @@ html[data-theme="dark"] .hero .hero-lede {color:#453629}
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  background: transparent;
   overflow: hidden;
 }
 .projects-grid .project-card .visual-corner-label {
