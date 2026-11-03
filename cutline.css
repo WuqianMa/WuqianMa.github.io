@@ -17,8 +17,8 @@ a:focus-visible,button:focus-visible {outline:3px dashed var(--cut-ink);outline-
 /* Printed masthead */
 .site-header {background:var(--bg);border-bottom:3px solid var(--cut-ink);backdrop-filter:none;-webkit-backdrop-filter:none}
 .header-inner {min-height:76px}
-.brand-symbol {display:inline-grid;place-items:center;width:66px;height:47px;line-height:1;flex-shrink:0}
-.mouse-mark {display:block;width:66px;height:47px;stroke:currentColor;overflow:visible}
+.brand-symbol {display:inline-grid;place-items:center;width:72px;height:52px;line-height:1;flex-shrink:0;background:#FFCC66;border:2px solid #282018;box-shadow:3px 3px 0 #282018;color:#282018}
+.mouse-mark {display:block;width:62px;height:42px;color:#282018;stroke:currentColor;overflow:visible}
 .brand-label {letter-spacing:.13em}
 .nav-links a:hover,.footer a:hover {color:var(--text);text-decoration:underline;text-decoration-style:solid;text-underline-offset:6px}
 .theme-toggle,.header-github {border:2px solid var(--cut-ink);border-radius:0;box-shadow:3px 3px 0 var(--cut-ink)}
